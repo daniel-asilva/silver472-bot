@@ -10,20 +10,20 @@ API_TOKEN = os.environ['TELEGRAM_TOKEN']
 print(API_TOKEN)
 
 bot = telebot.TeleBot(API_TOKEN)
-known_users = []
+# known_users = []
 
-with open(os.path.join(WORKDIR, 'files/known_users.txt'), mode='r',encoding='utf-8') as f:
-	for line in f:
-		known_users.append(int(line.split("#")[0].strip()))
+# with open(os.path.join(WORKDIR, 'files/known_users.txt'), mode='r',encoding='utf-8') as f:
+# 	for line in f:
+# 		known_users.append(int(line.split("#")[0].strip()))
 
 @bot.message_handler(commands=['start'])
 def command_start(m):
 	cid = m.chat.id
-	if cid not in known_users:
-		bot.send_message(cid,"Seja bem vindo!")
-		with open(os.path.join(WORKDIR, 'files/known_users.txt'), mode='w',encoding='utf-8') as f:
-			f.write(cid+" # "+m.chat.username)
-			known_users.append(cid)
+	# if cid not in known_users:
+	bot.send_message(cid,"Seja bem vindo!")
+	# with open(os.path.join(WORKDIR, 'files/known_users.txt'), mode='w',encoding='utf-8') as f:
+	# 	f.write(cid+" # "+m.chat.username)
+	# 	known_users.append(cid)
 
 # help page
 @bot.message_handler(commands=['help'])
