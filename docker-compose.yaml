@@ -1,0 +1,3 @@
+bot:
+  image: silver472-bot
+  env_file: ".env"

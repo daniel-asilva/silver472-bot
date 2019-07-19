@@ -1,0 +1,7 @@
+* Comandos *
+
+/zbetho - Envia o áudio tliggeled
+/pikachu - Envia a imagem do Pikachu surprised
+/pqp - Envia o áudio do De Pinho
+/iutubi - Envia a mensagem do Luigi
+/oibb - Envia o áudio do Oi BB
