@@ -5,3 +5,6 @@
 /pqp - Envia o áudio do De Pinho
 /iutubi - Envia a mensagem do Luigi
 /oibb - Envia o áudio do Oi BB
+/olokinho - Envia o áudio do olokinho meu
+/naruto - Envia a Naruto Sad Song versão funk
+/rolinhamole - Envia o vídeo da rolinha mole

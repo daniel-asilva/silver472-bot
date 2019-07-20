@@ -66,4 +66,25 @@ def command_oibb(m):
 		bot.send_chat_action(cid,'record_audio')
 		bot.send_voice(cid,"AwADBAADDAEAAhaglFPTHE39AW2hKgI")
 
+@bot.message_handler(commands=['olokinho'])
+def command_olokinho(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'record_audio')
+		bot.send_voice(cid,"AwADBAADJAEAAq40XFI2NSjEdrThcAI")
+
+@bot.message_handler(commands=['naruto'])
+def command_naruto(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'record_audio')
+		bot.send_voice(cid,"AwADBAADWwAD2tZMUF2yj_-0EK3YAg")
+
+@bot.message_handler(commands=['rolinhamole'])
+def command_rolinha(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'upload_video')
+		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=Vc4xZ11ghnI")
+
 bot.polling(none_stop=False,interval=0,timeout=20)
