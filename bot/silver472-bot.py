@@ -3,6 +3,8 @@
 import telebot, logging, os
 from consts import users
 from tenacity import retry
+from tenacity import wait_chain
+from tenacity import wait_fixed
 
 WORKDIR = "./"
 logger = telebot.logger
