@@ -2,12 +2,22 @@
 
 import telebot, logging, os
 from consts import users
+from tenacity import retry
+from tenacity import wait_chain
+from tenacity import wait_fixed
 
 WORKDIR = "./"
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
+# temporário | log para arquivo #
+fh = logging.FileHandler('logs/debug.log')
+fh.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S %z')
+fh.setFormatter(formatter)
+telebot.logger.addHandler(fh)
+# ----------------------------- #
+
 API_TOKEN = os.environ['TELEGRAM_TOKEN']
-print(API_TOKEN)
 
 bot = telebot.TeleBot(API_TOKEN)
 known_users = []
@@ -87,4 +97,11 @@ def command_rolinha(m):
 		bot.send_chat_action(cid,'upload_video')
 		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=Vc4xZ11ghnI")
 
-bot.polling(none_stop=False,interval=0,timeout=20)
+################################### POLLING ###################################
+
+@retry(wait=wait_chain(*[wait_fixed(10) for i in range(5)] +
+						   [wait_fixed(20)]))
+def polling_forever():
+	bot.polling(none_stop=False, interval=0, timeout=20)
+
+polling_forever()
