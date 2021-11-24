@@ -9,13 +9,6 @@ from tenacity import wait_fixed
 WORKDIR = "./"
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
-# temporário | log para arquivo #
-fh = logging.FileHandler('logs/debug.log')
-fh.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S %z')
-fh.setFormatter(formatter)
-telebot.logger.addHandler(fh)
-# ----------------------------- #
 
 API_TOKEN = os.environ['TELEGRAM_TOKEN']
 
