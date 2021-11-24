@@ -85,6 +85,6 @@ def command_rolinha(m):
 	cid = m.chat.id
 	if cid in known_users:
 		bot.send_chat_action(cid,'upload_video')
-		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=Vc4xZ11ghnI")
+		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=FqTOA_hprzw")
 
 bot.infinity_polling(skip_pending=True) # Skips old updates
