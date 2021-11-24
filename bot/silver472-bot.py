@@ -2,9 +2,6 @@
 
 import telebot, logging, os
 from consts import users
-from tenacity import retry
-from tenacity import wait_chain
-from tenacity import wait_fixed
 
 WORKDIR = "./"
 logger = telebot.logger
@@ -90,11 +87,4 @@ def command_rolinha(m):
 		bot.send_chat_action(cid,'upload_video')
 		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=Vc4xZ11ghnI")
 
-################################### POLLING ###################################
-
-@retry(wait=wait_chain(*[wait_fixed(10) for i in range(5)] +
-						   [wait_fixed(20)]))
-def polling_forever():
-	bot.polling(none_stop=False, interval=0, timeout=20)
-
-polling_forever()
+bot.infinity_polling(skip_pending=True) # Skips old updates
