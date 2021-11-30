@@ -1,5 +1,5 @@
-FROM python:3.7.4-alpine
+FROM python:3.10-alpine
 WORKDIR /workspace
 COPY bot /workspace
-RUN pip install -r requirements.txt
-CMD python silver472-bot.py
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python", "./silver472-bot.py"]

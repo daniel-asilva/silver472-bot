@@ -1,6 +1,8 @@
-silver472-bot:
-  container_name: silver472-bot
-  image: silver472-bot
-  env_file: ".env"
-  volumes:
-    - ${USERDIR}/docker/silver472-bot:/workspace/logs
+version: "3.8"
+
+services:
+  silver472-bot:
+    container_name: silver472-bot
+    build: .
+    image: local/silver472-bot
+    env_file: ".env"
