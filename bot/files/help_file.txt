@@ -8,3 +8,4 @@
 /olokinho - Envia o áudio do olokinho meu
 /naruto - Envia a Naruto Sad Song versão funk
 /rolinhamole - Envia o vídeo da rolinha mole
+/vaiamerda - Envia o vídeo do Alborghetti
