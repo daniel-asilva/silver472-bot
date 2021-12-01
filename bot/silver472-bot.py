@@ -87,4 +87,11 @@ def command_rolinha(m):
 		bot.send_chat_action(cid,'upload_video')
 		bot.send_message(cid,"Tá moli\n\nhttp://www.youtube.com/watch?v=FqTOA_hprzw")
 
+@bot.message_handler(commands=['vaiamerda'])
+def command_vaiamerda(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'upload_video')
+		bot.send_message(cid,"http://www.youtube.com/watch?v=ujGiICz_W5k")
+
 bot.infinity_polling(skip_pending=True) # Skips old updates
