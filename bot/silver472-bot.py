@@ -80,6 +80,13 @@ def command_naruto(m):
 		bot.send_chat_action(cid,'record_audio')
 		bot.send_voice(cid,"AwADBAADWwAD2tZMUF2yj_-0EK3YAg")
 
+@bot.message_handler(commands=['parabains'])
+def command_parabains(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'upload_video')
+		bot.send_message(cid,"Muitos PARABAINS\n\nhttps://www.youtube.com/watch?v=1Mcdh2Vf2Xk")
+
 @bot.message_handler(commands=['rolinhamole'])
 def command_rolinha(m):
 	cid = m.chat.id

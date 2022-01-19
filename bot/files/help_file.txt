@@ -7,5 +7,6 @@
 /oibb - Envia o áudio do Oi BB
 /olokinho - Envia o áudio do olokinho meu
 /naruto - Envia a Naruto Sad Song versão funk
+/parabains - Envia o vídeo da PARABAINS
 /rolinhamole - Envia o vídeo da rolinha mole
 /vaiamerda - Envia o vídeo do Alborghetti
