@@ -101,4 +101,11 @@ def command_vaiamerda(m):
 		bot.send_chat_action(cid,'upload_video')
 		bot.send_message(cid,"http://www.youtube.com/watch?v=ujGiICz_W5k")
 
+@bot.message_handler(commands=['putaria'])
+def command_putaria(m):
+	cid = m.chat.id
+	if cid in known_users:
+		bot.send_chat_action(cid,'upload_video')
+		bot.send_message(cid,"https://youtu.be/psp6enyyrZs")
+
 bot.infinity_polling(skip_pending=True) # Skips old updates
